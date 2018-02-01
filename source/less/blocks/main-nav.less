@@ -1,8 +1,24 @@
 .main-nav{
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
   background-color: @second-color;
 }
 
+.main-nav__toggle{
+  position: absolute;
+  right: 1px;
+}
+
+.main-nav__list{
+  padding: 0;
+}
+
 .main-nav__item{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: @second-color;
   list-style: none;
 }
 
@@ -11,5 +27,7 @@
   line-height: 40px;
   font-weight: 700;
   color: @main-color;
+  text-transform: uppercase;
   text-decoration: none;
 }
+

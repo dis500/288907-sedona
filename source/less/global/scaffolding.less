@@ -16,6 +16,8 @@
 }
 
 body{
+  margin: 0;
+  font-family: "Pt Sans";
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -23,10 +25,38 @@ body{
 }
 
 .btn-item{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 15px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: @main-color;
   background-color: @second-color;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+figure{
+  margin: 0;
+}
+
+img{
+  width: 100%;
+  height: auto;
 }
