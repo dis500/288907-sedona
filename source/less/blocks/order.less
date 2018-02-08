@@ -1,12 +1,17 @@
 .order{
   width: 320px;
   margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 49px;
 }
 
 .order__title{
   width: 218px;
-  margin: 0 auto;
-  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
@@ -15,7 +20,10 @@
 
 .order__text{
   width: 265px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
@@ -23,5 +31,39 @@
 
 .order__button{
   display: block;
-  width: 280px;
+}
+
+@media (min-width: @tablet-width){
+  .order{
+    width: 768px;
+    padding-top: 55px;
+    padding-bottom: 57px;
+  }
+  
+  .order__title{
+    width: 305px;
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 26px;
+  }
+  
+  .order__text{
+    width: 440px;
+    margin-bottom: 42px;
+  }
+  
+  .order__button{
+    width: 438px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .order{
+    width: 1200px;
+    padding-bottom: 65px;
+  }
+  
+  .order__text{
+    margin-bottom: 47px;
+  }
 }

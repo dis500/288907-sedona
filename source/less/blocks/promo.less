@@ -1,6 +1,12 @@
 .promo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 320px;
-  margin: 0 auto;
+  min-height: 158px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .promo__title{
@@ -22,4 +28,28 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width){
+  .promo{
+    width: 768px;
+    min-height: 105px;
+    padding-top: 50px;
+    padding-bottom: 56px;
+  }
+
+  .promo__title{
+    width: 443px;
+    font-size: 21px;
+  }
+
+  .promo__text{
+    width: 494px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .promo{
+    width: 1200px;
+  }
 }

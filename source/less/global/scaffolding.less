@@ -11,7 +11,7 @@
   font-family: "Pt Sans";
   font-weight: 700;
   font-style: normal;
-  src: url("../../ptsansbold.woff") format("woff"),
+  src: url("../../fonts/ptsansbold.woff") format("woff"),
        url("../../fonts/ptsansbold.woff2") format("woff2");
 }
 
@@ -25,10 +25,14 @@ body{
 }
 
 .btn-item{
+  display: block;
+  width: 280px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 16px;
   padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -37,6 +41,7 @@ body{
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: 0;
 }
 
 .visually-hidden {
@@ -57,6 +62,18 @@ figure{
 }
 
 img{
-  width: 100%;
-  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.input-item{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 21px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: @gray;
+  border: 0;
+  box-sizing: border-box;
 }

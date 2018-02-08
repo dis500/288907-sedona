@@ -7,12 +7,61 @@
 .advantages__item{
   width: 255px;
   margin: 0 auto;
+  padding-top: 21px;
+  padding-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .advantages__title{
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.advantages__index{
+  margin-top: 0;
+}
+
+@media (min-width: @tablet-width){
+  .advantages{
+    display: flex;
+    width: 768px;
+    padding-top: 23px;
+    padding-bottom: 10px;
+  }
+  
+  .advantages__title{
+    width: 123px;
+    font-size: 21px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .advantages__index{
+    margin-bottom: 21px;
+  }
+  
+  .advantages__text{
+    width: 163px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .advantages{
+    width: 1200px;
+    padding-bottom: 30px;
+  }
+  
+  .advantages__item{
+    width: 295px;
+  }
+  
+  .advantages__text{
+    width: 290px;
+  }
 }

@@ -1,18 +1,56 @@
 .request{
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 25px;
 }
 
 .request__title{
+  width: 145px;
+  margin-top: 0;
+  margin-bottom: 22px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.request__wrapper{
+  width: 280px;
+  margin: 0 auto;
+}
+
+.request__label{
+  display: flex;
+  width: 280px;
+}
+
+.request__label:not(:last-child){
+  margin-bottom: 21px;
 }
 
 .request__name{
+  margin: auto;
+  padding-right: 12px;
   line-height: 26px;
+  text-transform: uppercase;
 }
 
 .request__input{
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
+  flex-grow: 1;
+  width: 181px;
 }
+
+@media (min-width: @tablet-width){
+  .request{
+    order: -4;
+  }
+  
+  .request__title{
+    font-size: 21px;
+  }
+}
+

@@ -1,14 +1,48 @@
 .attributes{
   width: 320px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  padding-bottom: 23px;
 }
 
 .attributes__item{
+  position: relative;
   width: 220px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attributes__item:not(:last-child){
+  margin-bottom: 26px;
+}
+
+.attributes__img{
+  position: absolute;
+  top: -10px;
+  left: -31px;
+  width: 39px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.attributes__img--house{
+  background-image: url(../../img/icon-house.svg);
+}
+
+.attributes__img--gift{
+  background-image: url(../../img/icon-gift.svg);
+}
+  
+.attributes__img--food{
+  background-image: url(../../img/icon-burger.svg);
 }
 
 .attributes__title{
+  margin-top: 0;
+  margin-left: 20px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -16,6 +50,82 @@
 }
 
 .attributes__text{
-  width: 213px;
+  width: 210px;
+  margin-left: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width){
+  .attributes{
+    display: flex;
+    flex-direction: row;
+    width: 768px;
+    margin-bottom: 0;
+    padding-top: 57px;
+    padding-bottom: 47px;
+  }
+  
+  .attributes__item--house{
+    order: -2;
+  }
+  
+  .attributes__item--food{
+    order: -1;
+  }
+  
+  .attributes__item:not(:last-child){
+    margin-bottom: 0;
+  }
+  
+  .attributes__img{
+    position: static;
+    width: 80px;
+    height: 78px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .attributes__img--house{
+    background-image: url(../../img/icon-house.svg);
+  }
+  
+  .attributes__img--gift{
+    background-image: url(../../img/icon-gift.svg);
+  }
+  
+  .attributes__img--food{
+    background-image: url(../../img/icon-burger.svg);
+  }
+  
+  .attributes__title{
+    margin-bottom: 21px;
+    margin-left: 0;
+    font-size: 21px;
+    text-align: center;
+  }
+  
+  .attributes__text{
+    width: 167px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .attributes{
+    width: 1200px;
+    padding-bottom: 68px;
+  }
+  
+  .attributes__item{
+    width: 290px;
+  }
+  
+  .attributes__text{
+    width: 280px;
+  }
 }

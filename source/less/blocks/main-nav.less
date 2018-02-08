@@ -31,3 +31,50 @@
   text-decoration: none;
 }
 
+@media (min-width: @tablet-width){
+  .main-nav{
+    position: relative;
+    width: 768px;
+    background-color: @main-color;
+  }
+  
+  .main-nav__toggle{
+    display: none;
+  }
+  
+  .main-nav__list{
+    display: flex;
+    justify-content: space-around;
+    width: 768px;
+  }
+  
+  .main-nav__item{
+    width: 20%;
+    background-color: @main-color;
+  }
+  
+  .main-nav__item:nth-child(2){
+    margin-right: auto;
+  }
+  
+  .main-nav__link{
+    font-size: 14px;
+    color: @title-color;
+  }
+}
+
+@media (min-width:@desctop-width){
+  .main-nav{
+    width: 1200px;
+  }
+  
+  .main-nav__list{
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+  }
+  
+  .main-nav__link{
+    font-size: 14px;
+  }
+}

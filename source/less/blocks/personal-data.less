@@ -1,18 +1,105 @@
 .personal-data{
+  width: 320px;
+  margin: auto;
+  padding-top: 19px;
+  padding-bottom: 25px;
 }
 
 .personal-data__title{
+  width: 243px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.personal-data__wrapper{
+  width: 280px;
+  margin: auto;
+}
+
+.personal-data__label:first-child{
+  display: block;
+  margin-bottom: 12px;
 }
 
 .personal-data__contacts{
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 20px;
   line-height: 26px;
+  text-transform: uppercase;
 }
 
 .personal-data__input{
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width){
+  .personal-data{
+    order: -3;
+    width: 768px;
+  }
+  
+  .personal-data__title{
+    width: 286px;
+    font-size: 21px;
+  }
+  
+  .personal-data__wrapper{
+    width: 650px;
+  }
+  
+  .personal-data__label{
+    width: 650px;
+  }
+  
+  .personal-data__input{
+    width: 650px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .personal-data{
+    width: 1200px;
+  }
+  
+  .personal-data__wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 962px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .personal-data__label{
+    display: flex;
+    width: 481px;
+  }
+  
+  .personal-data__label:first-child{
+    display: flex;
+    margin: 0;
+  }
+  
+  .personal-data__contacts{
+    align-self: center;
+    margin-left: 0;
+    margin-right: 13px;
+  }
+  
+  .personal-data__contacts-item{
+    display: none;
+  }
+  
+  .personal-data__input{
+    width: 315px;
+  }
 }
