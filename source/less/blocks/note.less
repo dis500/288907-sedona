@@ -1,29 +1,20 @@
 .note{
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 11px;
+  padding-top: 39px;
+  text-align: center;
 }
 
 .note__title{
-  width: 215px;
+  margin-top: 0;
   margin-bottom: 27px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .note__text{
-  width: 245px;
+  margin-top: 0;
   margin-bottom: 35px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 24px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .note__wrapper{
@@ -36,16 +27,28 @@
 }
 
 .note__player{
+  position: relative;
   padding-top: 19px;
   padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #48403d;
 }
 
 .note__player-scale{
-  align-self: center;
-  width: 235px;
   height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.note__player-toggle{
+  position: absolute;
+  top: 45%;
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  font-size: 0;
   background-color: @main-color;
+  border-radius: 50%;
 }
 
 .note__controls{
@@ -63,6 +66,8 @@
 .note__controls-replay{
   width: 18px;
   height: 21px;
+  padding: 0;
+  font-size: 0;
   color: transparent;
   background-color: transparent;
   background-image: url(../../img/icon-video-replay.svg);
@@ -80,6 +85,8 @@
 .note__controls-subs{
   width: 34px;
   height: 21px;
+  padding: 0;
+  font-size: 0;
   color: transparent;
   background-color: transparent;
   background-image: url(../../img/icon-video-subtitles.svg);
@@ -91,6 +98,8 @@
 .note__controls-size{
   width: 22px;
   height: 21px;
+  padding: 0;
+  font-size: 0;
   color: transparent;
   background-color: transparent;
   background-image: url(../../img/icon-video-fullscreen.svg);
@@ -104,13 +113,14 @@
     width: 768px;
   }
   
-  .note__title{
-    width: 355px;
-    font-size: 30px;
+  .note__item{
+    padding-left: 165px;
+    padding-right: 165px;
+    text-align: center;
   }
   
-  .note__text{
-    width: 420px;
+  .note__title{
+    font-size: 30px;
   }
   
   .note__video{

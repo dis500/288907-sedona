@@ -1,30 +1,24 @@
 .personal-data{
-  width: 320px;
-  margin: auto;
   padding-top: 19px;
   padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .personal-data__title{
-  width: 243px;
   margin-top: 0;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
 }
 
-.personal-data__wrapper{
-  width: 280px;
-  margin: auto;
+.personal-data__label{
+  display: block;
 }
 
 .personal-data__label:first-child{
-  display: block;
   margin-bottom: 12px;
 }
 
@@ -37,6 +31,8 @@
 }
 
 .personal-data__input{
+  width: 100%;
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -44,13 +40,38 @@
 
 @media (min-width: @tablet-width){
   .personal-data{
+    position: relative;
     order: -3;
-    width: 768px;
+    width: 648px;
+    padding-top: 69px;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  
+  .personal-data::before{
+    position: absolute;
+    top: 23%;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  .personal-data::after{
+    position: absolute;
+    top: 23%;
+    right: 0;
+    content: "";
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
   }
   
   .personal-data__title{
-    width: 286px;
+    margin-bottom: 24px;
     font-size: 21px;
+    text-align: center;
   }
   
   .personal-data__wrapper{
@@ -58,17 +79,41 @@
   }
   
   .personal-data__label{
-    width: 650px;
+    width: 100%;
+  }
+  
+  .personal-data__label:first-child{
+    margin-bottom: 22px;
+  }
+  
+  .personal-data__contacts{
+    margin-left: 25px;
   }
   
   .personal-data__input{
-    width: 650px;
+    width: 100%;
+    padding-left: 20px;
   }
 }
 
 @media (min-width: @desctop-width){
   .personal-data{
     width: 1200px;
+  }
+  
+  .personal-data::before{
+    top: 32%;
+    width: 280px;
+  }
+
+  .personal-data::after{
+    top: 32%;
+    right: 0;
+    width: 280px;
+  }
+  
+  .personal-data__title{
+    margin-bottom: 71px;
   }
   
   .personal-data__wrapper{
@@ -81,16 +126,15 @@
   
   .personal-data__label{
     display: flex;
+    align-items: baseline;
     width: 481px;
   }
   
   .personal-data__label:first-child{
-    display: flex;
     margin: 0;
   }
   
   .personal-data__contacts{
-    align-self: center;
     margin-left: 0;
     margin-right: 13px;
   }

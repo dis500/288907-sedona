@@ -1,16 +1,12 @@
 .attributes{
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 35px;
   padding-bottom: 23px;
 }
 
 .attributes__item{
   position: relative;
-  width: 220px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 70px;
+  padding-right: 30px;
 }
 
 .attributes__item:not(:last-child){
@@ -42,7 +38,7 @@
 
 .attributes__title{
   margin-top: 0;
-  margin-left: 20px;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -50,19 +46,24 @@
 }
 
 .attributes__text{
-  width: 210px;
-  margin-left: 20px;
-  text-transform: uppercase;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width){
   .attributes{
     display: flex;
     flex-direction: row;
-    width: 768px;
     margin-bottom: 0;
     padding-top: 57px;
     padding-bottom: 47px;
+    text-align: center;
+  }
+  
+  .attributes__item{
+    width: 33.333333%;
+    padding-left: 45px;
+    padding-right: 45px;
+    box-sizing: border-box;
   }
   
   .attributes__item--house{
@@ -106,26 +107,10 @@
     font-size: 21px;
     text-align: center;
   }
-  
-  .attributes__text{
-    width: 167px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
 }
 
 @media (min-width: @desctop-width){
   .attributes{
-    width: 1200px;
     padding-bottom: 68px;
-  }
-  
-  .attributes__item{
-    width: 290px;
-  }
-  
-  .attributes__text{
-    width: 280px;
   }
 }

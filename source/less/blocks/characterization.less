@@ -1,34 +1,27 @@
 .characterization{
-  width: 320px;
-  margin: 0 auto;
   padding-top: 23px;
   padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .characterization__title{
-  width: 238px;
   margin-top: 0;
   margin-bottom: 22px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  text-transform: uppercase;
-}
-
-.characterization__wrapper{
-  width: 280px;
+  text-align: center;
 }
 
 .characterization__label{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 21px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: none;
 }
 
 .characterization__label:not(:last-child){
@@ -59,10 +52,33 @@
 @media (min-width: @tablet-width){
   .characterization{
     order: -5;
+    width: 50%;
+    padding-top: 52px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
   }
   
   .characterization__title{
-    width: 280px;
+    margin-bottom: 60px;
     font-size: 21px;
+    text-align: left;
+  }
+  
+  .characterization__label:not(:last-child){
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .characterization{
+    padding-top: 37px;
+    padding-right: 0;
+  }
+  
+  .characterization__title{
+    padding-right: 60px;
+    text-align: center;
   }
 }

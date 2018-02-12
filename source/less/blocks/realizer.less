@@ -1,13 +1,8 @@
 .realizer{
   display: flex;
-  justify-content: space-between;
-  width: 140px;
-  margin-top: 23px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  margin: 0;
   line-height: 26px;
-  text-transform: uppercase;
 }
 
 .realizer__icon{
@@ -20,8 +15,16 @@
 
 @media (min-width: @tablet-width){
   .realizer{
-    height: 38px;
-    margin-top: 24px;
+    justify-content: flex-end;
+    width: 33.333333%;
     margin-bottom: 0;
+    padding-right: 60px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .realizer{
+    padding-right: 45px;
   }
 }

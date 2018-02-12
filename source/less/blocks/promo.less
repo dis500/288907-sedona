@@ -1,17 +1,32 @@
 .promo{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   width: 320px;
-  min-height: 158px;
-  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 31px;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+.promo::after{
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  content: "";
+  width: 320px;
+  height: 20px;
+  background-image: url(../../img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .promo__title{
-  width: 261px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 27px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -21,8 +36,10 @@
 }
 
 .promo__text{
-  width: 255px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -32,24 +49,28 @@
 
 @media (min-width: @tablet-width){
   .promo{
-    width: 768px;
+    width: auto;
     min-height: 105px;
     padding-top: 50px;
     padding-bottom: 56px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+  }
+  
+  .promo::after{
+    display: none;
   }
 
   .promo__title{
-    width: 443px;
     font-size: 21px;
-  }
-
-  .promo__text{
-    width: 494px;
   }
 }
 
 @media (min-width: @desctop-width){
   .promo{
-    width: 1200px;
+    padding-left: 355px;
+    padding-right: 355px;
+    box-sizing: border-box;
   }
 }
