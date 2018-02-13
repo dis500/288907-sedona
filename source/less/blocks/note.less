@@ -18,21 +18,22 @@
 }
 
 .note__wrapper{
+ background: #f2f2f2;
   display: flex;
-  flex-direction: column;
-  width: 280px;
-  margin-top: -50px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 24px 20px 22px;
+  box-sizing: border-box;
 }
 
 .note__player{
-  position: relative;
-  padding-top: 19px;
-  padding-bottom: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #48403d;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 22px 22px 20px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 100%;
 }
 
 .note__player-scale{
@@ -49,18 +50,6 @@
   font-size: 0;
   background-color: @main-color;
   border-radius: 50%;
-}
-
-.note__controls{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 232px;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 24px;
-  padding-right: 24px;
-  background-color: #f2f2f2;
 }
 
 .note__controls-replay{
@@ -110,89 +99,110 @@
 
 @media (min-width: @tablet-width){
   .note{
-    width: 768px;
+    max-width: 768px;
   }
-  
+
   .note__item{
     padding-left: 165px;
     padding-right: 165px;
     text-align: center;
   }
-  
+
+  .note__video{
+    position: relative;
+  }
+
+  .note__img{
+    height: 500px;
+  }
+
   .note__title{
+    margin-bottom: 30px;
     font-size: 30px;
   }
-  
+
+  .note__text{
+    margin-bottom: 75px;
+  }
+
   .note__video{
     width: 650px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .note__wrapper{
-    position: relative;
-    width: 650px;
-    margin-top: -88px;
+    padding: 35px 41px 38px 35px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
   }
-  
+
   .note__player{
-    padding-top: 42px;
-    padding-bottom: 42px;
-    padding-left: 93px;
-    padding-right: 167px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: none;
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 100%;
+    flex-grow: 1;
+    margin: 0 42px;
+    padding: 0;
   }
-  
+
   .note__player-scale{
     width: 390px;
     opacity: 0.5;
   }
-  
-  .note__controls{
-    position: absolute;
-    bottom: 13px;
-    display: flex;
-    justify-content: space-between;
-    width: 580px;
-    padding-left: 35px;
-    padding-right: 35px;
-    background-color: transparent;
+
+  .note__player-toggle{
+    top: -60%;
+    left: 40%;
+  }
+
+  .note__controls-replay{
+    order: -1;
   }
 }
 
 @media (min-width: @desctop-width){
   .note{
-    width: 1200px;
+    max-width: 1200px;
     padding-top: 42px;
   }
-  
+
+  .note__item{
+    padding-left: 385px;
+    padding-right: 385px;
+  }
+
   .note__title{
     margin-bottom: 30px;
   }
-  
+
   .note__text{
     margin-bottom: 70px;
   }
-  
+
   .note__video{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .note__wrapper{
     width: 800px;
     margin-top: -92px;
   }
-  
+
   .note__player{
     width: 540px;
   }
-  
+
   .note__player-scale{
     width: 540px;
   }
-  
+
   .note__controls{
     width: 730px;
   }

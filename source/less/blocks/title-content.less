@@ -3,7 +3,7 @@
   height: 158px;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 100%; 
+  background-position: 50% 100%;
   &::before{
     position: absolute;
     top: 52px;
@@ -48,7 +48,7 @@
       transform: translateX(-50%);
     }
   }
-  
+
   .title-content--size{
     height: 518px;
     background-size: cover;
@@ -58,8 +58,8 @@
       height: 350px;
     }
   }
-  
-  
+
+
   .title-content::after{
     display: none;
   }
@@ -67,7 +67,14 @@
 
 @media (min-width: @desctop-width){
   .title-content{
-    width: 1200px;
+    height: 301px;
     background-size: cover;
+    &::before{
+      top: 102px;
+    }
+  }
+
+  .title-content--size{
+    height: 518px;
   }
 }
