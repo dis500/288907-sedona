@@ -1,8 +1,5 @@
 .promo{
   position: relative;
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 38px;
   padding-bottom: 23px;
   padding-left: 32px;
@@ -12,10 +9,10 @@
 
 .promo::after{
   position: absolute;
-  bottom: -19px;
+  top: 100%;
   left: 0;
   content: "";
-  width: 320px;
+  width: 100%;
   height: 20px;
   background-image: url(../../img/bg-triangle.svg);
   background-repeat: no-repeat;
@@ -25,26 +22,20 @@
 .promo__title{
   margin-top: 0;
   margin-bottom: 28px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: @title-color;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .promo__text{
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   text-align: center;
-  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width){
@@ -69,8 +60,7 @@
 
 @media (min-width: @desctop-width){
   .promo{
-    padding-left: 355px;
-    padding-right: 355px;
+    max-width: 700px;
     box-sizing: border-box;
   }
 }
