@@ -1,14 +1,84 @@
 .characterization{
+  padding-top: 21px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .characterization__title{
+  margin-top: 0;
+  margin-bottom: 22px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 .characterization__label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: none;
+}
+
+.characterization__label:not(:last-child){
+  margin-bottom: 15px;
+}
+
+.characterization__label::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background-color: #f2f2f2;
+  border: 17px solid #f2f2f2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.characterization__input{
+  display: none;
+}
+
+.characterization__input:checked + .characterization__label::before{
+  background-color: #333333;
+  background-clip: content-box;
+}
+
+@media (min-width: @tablet-width){
+  .characterization{
+    order: -5;
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+
+  .characterization__title{
+    margin-bottom: 60px;
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .characterization__label:not(:last-child){
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .characterization{
+    padding-top: 37px;
+    padding-right: 0;
+  }
+
+  .characterization__title{
+    padding-right: 60px;
+    text-align: center;
+  }
 }

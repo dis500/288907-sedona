@@ -1,8 +1,121 @@
 .attributes{
+  padding-top: 35px;
+  padding-bottom: 37px;
+}
+
+.attributes__item{
+  position: relative;
+  padding-left: 70px;
+  padding-right: 30px;
+}
+
+.attributes__item:not(:last-child){
+  margin-bottom: 26px;
+}
+
+.attribures__item-house::before{
+   position: absolute;
+   width: 39px;
+   height: 39px;
+   background-image: url(../../img/icon-house.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+.attributes__item--gift::before{
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  background-image: url(../../img/icon-gift.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.attributes__item--food::before{
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  background-image: url(../../img/icon-burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .attributes__title{
+  margin-top: 0;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.attributes__text{
+  margin: 0;
+}
+
+@media (min-width: @tablet-width){
+  .attributes{
+    display: flex;
+    flex-direction: row;
+    padding-top: 57px;
+    padding-bottom: 61px;
+    text-align: center;
+  }
+
+  .attributes__item{
+    width: 33.333333%;
+    padding-left: 45px;
+    padding-right: 45px;
+    box-sizing: border-box;
+  }
+
+  .attributes__item--house{
+    order: -2;
+  }
+
+  .attributes__item--food{
+    order: -1;
+  }
+
+  .attributes__item:not(:last-child){
+    margin-bottom: 0;
+  }
+
+  .attributes__img{
+    position: static;
+    width: 80px;
+    height: 78px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .attributes__img--house{
+    background-image: url(../../img/icon-house.svg);
+  }
+
+  .attributes__img--gift{
+    background-image: url(../../img/icon-gift.svg);
+  }
+
+  .attributes__img--food{
+    background-image: url(../../img/icon-burger.svg);
+  }
+
+  .attributes__title{
+    margin-bottom: 21px;
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .attributes{
+    padding-bottom: 82px;
+  }
 }

@@ -1,12 +1,53 @@
 .failur-popup{
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 35px;
+}
+
+.failur-popup__wrapper{
+  width: 220px;
+  margin: 0 auto;
 }
 
 .failur-popup__title{
+  margin-top: 0;
+  margin-bottom: 27px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 .failur-popup__text{
+  margin-top: 0;
+  margin-bottom: 24px;
   line-height: 24px;
+  text-align: center;
+}
+
+.failur-popup__btn{
+  width: 180px;
+}
+
+@media (min-width: @tablet-width){
+  .failur-popup{
+    width: 400px;
+  }
+  
+  .failur-popup__wrapper{
+    width: 295px;  
+  }
+  
+  .failur-popup__title{
+    width: 220px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .failur-popup__btn{
+    width: 272px;
+  }
 }

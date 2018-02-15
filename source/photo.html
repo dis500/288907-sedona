@@ -9,9 +9,10 @@
 </head>
 
 <body>
+  <div class="total-wrapper">
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="#" width="100%" height="100%" alt="City of Sedona">
+      <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" width="100%" height="100%" alt="Логотип">
     </a>
     <nav class="main-nav main-nav--open">
       <button class="main-nav__toggle" type="button">Открыть</button>
@@ -34,20 +35,22 @@
   <main class="gallery">
     <section class="title-content">
       <p class="visually-hidden">Sedona</p>
-      <img class="title-content__image" src="/img/bg-back-mobile@1x.jpg" width="320" height="389" alt="Вид на горы">
     </section>
     <section class="media-post">
       <h1 class="media-post__title">Фото и видео</h1>
       <p class="media-post__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     </section>
     <section class="photo">
-      <article class="photo__item">
+      <div class="photo__wrapper">
+      <article class="photo__item photo__item--full">
         <a class="photo__link">
-          <img class="photo__image" src="/img/photo-sunset-mobile@1x.jpg" width="280" height="278" alt="Закат">
+          <img class="photo__image" src="/img/photo-sunset-mobile@1x.jpg" width="100%" height="100%" alt="Закат">
         </a>
         <div class="photo__comment">
-          <h2 class="photo__title">Неродные просторы</h2>
-          <p class="photo__author">Автор фото: <cite class="photo__author-name">Борис</cite></p>
+          <div class="photo__comment-wrapper">
+            <h2 class="photo__title">Неродные просторы</h2>
+            <p class="photo__author">Автор фото: <cite class="photo__author-name">Борис</cite></p>
+          </div>
           <a class="photo__likes">
           <span class="photo__index">1350</span>
           </a>
@@ -55,11 +58,13 @@
       </article>
       <article class="photo__item">
         <a class="photo__link">
-          <img class="photo__image" src="/img/photo-cactus-mobile@1x.jpg" width="280" height="278" alt="Кактусы">
+          <img class="photo__image" src="/img/photo-cactus-mobile@1x.jpg" width="100%" height="100%" alt="Кактусы">
         </a>
         <div class="photo__comment">
-          <h2 class="photo__title">Местная растительность</h2>
-          <p class="photo__author">Автор фото: <cite class="photo__author-name">Сергей</cite></p>
+          <div class="photo__comment-wrapper">
+            <h2 class="photo__title">Местная растительность</h2>
+            <p class="photo__author">Автор фото: <cite class="photo__author-name">Сергей</cite></p>
+          </div>
           <a class="photo__likes">
           <span class="photo__index">143</span>
           </a>
@@ -67,11 +72,13 @@
       </article>
       <article class="photo__item">
         <a class="photo__link">
-          <img class="photo__image" src="/img/photo-roads-mobile@1x.jpg" width="280" height="278" alt="Дороги">
+          <img class="photo__image" src="/img/photo-roads-mobile@1x.jpg" width="100%" height="100%" alt="Дороги">
         </a>
         <div class="photo__comment">
-          <h2 class="photo__title">Дорога на север</h2>
-          <p class="photo__author">Автор фото: <cite class="photo__author-name">Петр</cite></p>
+          <div class="photo__comment-wrapper">
+            <h2 class="photo__title">Дорога на север</h2>
+            <p class="photo__author">Автор фото: <cite class="photo__author-name">Петр</cite></p>
+          </div>
           <a class="photo__likes">
           <span class="photo__index">96</span>
           </a>
@@ -79,31 +86,36 @@
       </article>
       <article class="photo__item">
         <a class="photo__link">
-          <img class="photo__image" src="/img/photo-bridge-mobile@1x.jpg" width="280" height="278" alt="Мост">
+          <img class="photo__image" src="/img/photo-bridge-mobile@1x.jpg" width="100%" height="100%" alt="Мост">
         </a>
         <div class="photo__comment">
-          <h2 class="photo__title">Мост Дьявола</h2>
-          <p class="photo__author">Автор фото: <cite class="photo__author-name">Антон</cite></p>
+          <div class="photo__comment-wrapper">
+            <h2 class="photo__title">Мост Дьявола</h2>
+            <p class="photo__author">Автор фото: <cite class="photo__author-name">Антон</cite></p>
+          </div>
           <a class="photo__likes">
           <span class="photo__index">254</span>
           </a>
         </div>
       </article>
+      </div>
     </section>
     <section class="note">
-      <p class="note__title">Вы еще сомневаетесь?</p>
-      <p class="note__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <div class="note__item">
+        <p class="note__title">Все еще сомневаетесь?</p>
+        <p class="note__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      </div>
       <div class="note__video">
-        <img class="note__img" src="/img/video-mobile@1x.jpg" width="320" height="200" alt="Видео">
+        <img class="note__img" src="/img/video-mobile@1x.jpg" width="100%" height="100%" alt="Видео">
         <div class="note__wrapper">
           <div class="note__player">
             <div class="note__player-scale"></div>
-            <div class="note__player-toggle"></div>
+            <button class="note__player-toggle" type="button">Ползунок для видео плеера</button>
           </div>
-          <div class="note__controls">
-            <button class="note__controls-replay" type="submit">Повтор</button>
-            <button class="note__controls-subs" type="submit">Субтитры</button>
-            <button class="note__controls-size" type="submit">На весь экран</button>
+          <button class="note__controls-replay" type="button">Повтор</button>
+          <div class="note__controls-wrapper">
+            <button class="note__controls-subs" type="button">Субтитры</button>
+            <button class="note__controls-size" type="button">На весь экран</button>
           </div>
         </div>
       </div>
@@ -120,4 +132,5 @@
       <a class="realizer__icon" href="https://htmlacademy.ru/intensive/adaptive">Htmlacademy</a>
     </p>
   </footer>
+  </div>
 </body>

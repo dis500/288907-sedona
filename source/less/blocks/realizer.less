@@ -1,3 +1,30 @@
 .realizer{
+  display: flex;
+  justify-content: center;
+  margin: 0;
   line-height: 26px;
+}
+
+.realizer__icon{
+  width: 32px;
+  color: transparent;
+  background-image: url(../../img/htmlacademy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width){
+  .realizer{
+    justify-content: flex-end;
+    width: 33.333333%;
+    margin-bottom: 0;
+    padding-right: 60px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .realizer{
+    padding-right: 45px;
+  }
 }

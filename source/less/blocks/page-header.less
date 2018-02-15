@@ -1,0 +1,28 @@
+.page-header{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.page-header__logo{
+  display: block;
+  width: 108px;
+  height: 83px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+}
+
+.page-header__logo-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width:@tablet-width){
+.page-header__logo{
+    position: absolute;
+    width: 20%;
+    top: 0;
+    left: 40%;
+  }
+}

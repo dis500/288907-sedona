@@ -1,15 +1,66 @@
 .promo{
+  position: relative;
+  padding-top: 38px;
+  padding-bottom: 23px;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+.promo::after{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-image: url(../../img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .promo__title{
+  margin-top: 0;
+  margin-bottom: 28px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: @title-color;
+  text-align: center;
 }
 
 .promo__text{
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width){
+  .promo{
+    width: auto;
+    min-height: 105px;
+    padding-top: 50px;
+    padding-bottom: 49px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+  }
+
+  .promo::after{
+    display: none;
+  }
+
+  .promo__title{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: @desctop-width){
+  .promo{
+    max-width: 700px;
+    box-sizing: border-box;
+  }
 }
