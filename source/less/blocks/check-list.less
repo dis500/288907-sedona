@@ -28,6 +28,7 @@
 }
 
 .check-list__label::before{
+  position: relative;
   content: "";
   display: inline-block;
   width: 56px;
@@ -35,6 +36,14 @@
   margin-right: 21px;
   background-color: #f2f2f2;
   cursor: pointer;
+}
+
+.check-list__label::after{
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
+  transform: rotate(-45deg);
 }
 
 .check-list__input{
