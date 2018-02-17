@@ -45,16 +45,21 @@
 @media (min-width: @tablet-width){
   .title-content{
     height: 290px;
+    margin-left: -59px;
+    margin-right: -59px;
     &::before{
       top: 95px;
       width: 462px;
       height: 78px;
       transform: translateX(-50%);
+      background-size: auto;
     }
   }
 
   .title-content--size{
     height: 518px;
+    margin-left: -59px;
+    margin-right: -59px;
     background-size: cover;
     &::before{
       top: 77px;
@@ -72,6 +77,8 @@
 @media (min-width: @desctop-width){
   .title-content{
     height: 301px;
+    margin-left: 0;
+    margin-right: 0;
     background-size: cover;
     &::before{
       top: 102px;
@@ -80,5 +87,10 @@
 
   .title-content--size{
     height: 518px;
+    margin-left: 0;
+    margin-right: 0;
+    &::before{
+      top: 77px;
+    }
   }
 }
