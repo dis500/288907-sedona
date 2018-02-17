@@ -3,6 +3,7 @@
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .personal-data__title{
@@ -15,6 +16,7 @@
 }
 
 .personal-data__label{
+  position: relative;
   display: block;
 }
 
@@ -28,6 +30,26 @@
   margin-left: 20px;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+.personal-data__item::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+
+.personal-data__item--number::before{
+  background-image: url(../../img/icon-phone.svg);
+}
+
+.personal-data__item--email::before{
+  background-image: url(../../img/icon-mail.svg);
 }
 
 .personal-data__input{
@@ -46,6 +68,7 @@
     padding-top: 69px;
     padding-left: 0;
     padding-right: 0;
+    border: 0;
     box-sizing: border-box;
   }
 
@@ -137,6 +160,10 @@
 
   .personal-data__contacts-item{
     display: none;
+  }
+
+  .personal-data__item--number::before{
+    right: 15%;
   }
 
   .personal-data__input{

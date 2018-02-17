@@ -13,9 +13,9 @@
   <header class="page-header">
     <a class="page-header__logo">
       <picture>
-        <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" width="100%" height="100%" alt="Логотип">
-        <source media="(min-width: 768px)" srcset="/img/logo-sedona-tablet.svg">
         <source media="(min-width: 1200px)" srcset="/img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="/img/logo-sedona-tablet.svg">
+        <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" width="100%" height="100%" alt="Логотип">
       </picture>
     </a>
     <nav class="main-nav main-nav--opened main-nav--closed">
@@ -68,11 +68,15 @@
         <div class="personal-data__wrapper">
           <label class="personal-data__label">
             <span class="personal-data__contacts"><span class="personal-data__contacts-item">Контактный</span> телефон*:</span>
-            <input class="personal-data__input input-item" type="number" name="number" placeholder="Введите телефон">
+            <div class="personal-data__item personal-data__item--number">
+              <input class="personal-data__input input-item" type="number" name="number" placeholder="Введите телефон">
+            </div>
           </label>
           <label class="personal-data__label">
             <span class="personal-data__contacts">Электронная почта*:</span>
-            <input class="personal-data__input input-item" type="email" name="email" placeholder="Введите e-mail">
+            <div class="personal-data__item personal-data__item--email">
+              <input class="personal-data__input input-item" type="email" name="email" placeholder="Введите e-mail">
+            </div>
           </label>
         </div>
       </div>
