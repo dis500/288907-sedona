@@ -21,6 +21,7 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: none;
 }
 
 .check-list__label:not(:last-child){
@@ -39,6 +40,14 @@
 
 .check-list__input{
   display: none;
+}
+
+.check-list__input:checked + .check-list__label::before{
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
+  transform: rotate(-45deg);
 }
 
 @media (min-width: @tablet-width){

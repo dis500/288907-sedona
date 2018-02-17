@@ -3,10 +3,39 @@
   width: 100%;
   background-color: @second-color;
 }
+.main-nav--opened{
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background-color: @main-color;
+  }
+
+  &::before{
+    top: 25px;
+    right: 20px;
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    top: 25px;
+    right: 20px;
+    transform: rotate(-45deg);
+  }
+}
+
 
 .main-nav__toggle{
   position: absolute;
-  right: 1px;
+  top: 15px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 0;
+  font-size: 0;
 }
 
 .main-nav__list{
