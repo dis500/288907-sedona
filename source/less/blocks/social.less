@@ -5,34 +5,23 @@
 }
 
 .social__item{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
   margin: 0;
+  font-size: 0;
   color: transparent;
   background-color: @second-color;
+  
+  svg{
+    fill: @main-color;
+  }
 }
 
 .social__item:not(:last-child){
   margin-right: 6px;
-}
-
-.social--twitter{
-  background-image: url(../../img/icon-twitter.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social--facebook{
-  background-image: url(../../img/icon-facebook.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social--youtube{
-  background-image: url(../../img/icon-youtube.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @media (min-width: @tablet-width){
