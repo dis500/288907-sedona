@@ -1,16 +1,21 @@
 .realizer{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   line-height: 26px;
 }
 
 .realizer__icon{
   width: 32px;
-  color: transparent;
-  background-image: url(../../img/htmlacademy.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  font-size: 0;
+  line-height: 0;
+  
+  svg{
+    width: 40px;
+    display: block;
+    fill: @title-color;
+  }
 }
 
 @media (min-width: @tablet-width){
