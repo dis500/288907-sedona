@@ -37,9 +37,10 @@
 
 .photo__likes{
   display: flex;
-  background-image: url(../../img/icon-like.svg);
-  background-repeat: no-repeat;
-  background-position: left;
+  
+  svg{
+    fill: #b2b2b2;
+  }
 }
 
 .photo__index{
@@ -124,5 +125,12 @@
     width: 100%;
     color: @main-color;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .photo__likes{
+    
+    svg{
+      fill: @main-color;
+    }
   }
 }
