@@ -7,16 +7,18 @@
   box-sizing: border-box;
 }
 
-.promo::after{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 20px;
-  background-image: url(../../img/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
+.promo{
+  &::after{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-image: url(../../img/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: bottom; 
+  }
 }
 
 .promo__title{
@@ -49,8 +51,10 @@
     box-sizing: border-box;
   }
 
-  .promo::after{
-    display: none;
+  .promo{
+    &::after{
+      display: none;
+    }
   }
 
   .promo__title{

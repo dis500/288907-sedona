@@ -33,6 +33,10 @@
   background-color: #f2f2f2;
   border: 0;
   box-sizing: border-box;
+  
+  &:hover{
+    background-color: #e5e5e5;
+  }
 }
 
 .comment__text{
@@ -54,23 +58,27 @@
     box-sizing: border-box;
   }
 
-  .comment::before{
-    position: absolute;
-    top: 11%;
-    content: "";
-    width: 125px;
-    height: 1px;
-    background-color: #dbdbdb;
+  .comment{
+    &::before{
+      position: absolute;
+      top: 11%;
+      content: "";
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb; 
+    }
   }
 
-  .comment::after{
-    position: absolute;
-    top: 11%;
-    right: 0;
-    content: "";
-    width: 125px;
-    height: 1px;
-    background-color: #dbdbdb;
+  .comment{
+    &::after{
+      position: absolute;
+      top: 11%;
+      right: 0;
+      content: "";
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb; 
+    }
   }
 
   .comment__title{
@@ -114,15 +122,19 @@
     margin-bottom: 66px;
   }
 
-  .comment::before{
-    top: 8%;
-    width: 280px;
+  .comment{
+    &::before{
+      top: 8%;
+      width: 280px; 
+    }
   }
 
-  .comment::after{
-    top: 8%;
-    right: 0;
-    width: 280px;
+  .comment{
+    &::after{
+      top: 8%;
+      right: 0;
+      width: 280px; 
+    }
   }
 
   .comment__label{

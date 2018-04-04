@@ -20,8 +20,10 @@
   display: block;
 }
 
-.personal-data__label:first-child{
-  margin-bottom: 11px;
+.personal-data__label{
+  &:first-child{
+    margin-bottom: 11px; 
+  }
 }
 
 .personal-data__contacts{
@@ -32,24 +34,30 @@
   text-transform: uppercase;
 }
 
-.personal-data__item::before{
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 10;
+.personal-data__item{
+  &::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 57px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10; 
+  }
 }
 
-.personal-data__item--number::before{
-  background-image: url(../../img/icon-phone.svg);
+.personal-data__item--number{
+  &::before{
+    background-image: url(../../img/icon-phone.svg); 
+  }
 }
 
-.personal-data__item--email::before{
-  background-image: url(../../img/icon-mail.svg);
+.personal-data__item--email{
+  &::before{
+    background-image: url(../../img/icon-mail.svg); 
+  }
 }
 
 .personal-data__input{
@@ -72,23 +80,27 @@
     box-sizing: border-box;
   }
 
-  .personal-data::before{
-    position: absolute;
-    top: 23%;
-    content: "";
-    width: 125px;
-    height: 1px;
-    background-color: #dbdbdb;
+  .personal-data{
+    &::before{
+      position: absolute;
+      top: 23%;
+      content: "";
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb; 
+    }
   }
 
-  .personal-data::after{
-    position: absolute;
-    top: 23%;
-    right: 0;
-    content: "";
-    width: 125px;
-    height: 1px;
-    background-color: #dbdbdb;
+  .personal-data{
+    &::after{
+      position: absolute;
+      top: 23%;
+      right: 0;
+      content: "";
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
   }
 
   .personal-data__title{
@@ -101,8 +113,10 @@
     width: 100%;
   }
 
-  .personal-data__label:first-child{
-    margin-bottom: 22px;
+  .personal-data__label{
+    &:first-child{
+      margin-bottom: 22px; 
+    }
   }
 
   .personal-data__contacts{
@@ -120,15 +134,19 @@
     width: 1200px;
   }
 
-  .personal-data::before{
-    top: 32%;
-    width: 280px;
+  .personal-data{
+    &::before{
+      top: 32%;
+      width: 280px; 
+    }
   }
 
-  .personal-data::after{
-    top: 32%;
-    right: 0;
-    width: 280px;
+  .personal-data{
+    &::after{
+      top: 32%;
+      right: 0;
+      width: 280px; 
+    }
   }
 
   .personal-data__title{
@@ -149,8 +167,10 @@
     width: 481px;
   }
 
-  .personal-data__label:first-child{
-    margin: 0;
+  .personal-data__label{
+    &:first-child{
+      margin: 0; 
+    }
   }
 
   .personal-data__contacts{
@@ -162,8 +182,10 @@
     display: none;
   }
 
-  .personal-data__item--number::before{
-    right: 15%;
+  .personal-data__item--number{
+    &::before{
+      right: 15%; 
+    }
   }
 
   .personal-data__input{

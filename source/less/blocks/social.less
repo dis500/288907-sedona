@@ -18,10 +18,24 @@
   svg{
     fill: @main-color;
   }
+  
+  &:hover{
+    background-color: #669ec0;
+  }
+  
+  &:active{
+    background-color: #5496bd;
+    
+    svg{
+      fill: #88b6d1;
+    }
+  }
 }
 
-.social__item:not(:last-child){
-  margin-right: 6px;
+.social__item{
+  &:not(:last-child){
+    margin-right: 6px;
+  }
 }
 
 @media (min-width: @tablet-width){

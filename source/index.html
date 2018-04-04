@@ -4,13 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="../build/css/style.min.css" as="style">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
 </head>
 
-<svg style="display: none">
+<div style="display: none">
   <include src="build/img/sprite.svg"></include>
-</svg>
+</div>
 
 <body>
   <div class="total-wrapper">
@@ -22,20 +25,20 @@
         <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" alt="Логотип">
       </picture>
     </a>
-    <nav class="main-nav main-nav--opened mai-nav--closed">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть</button>
       <ul class="main-nav__list">
-        <li class="main-nav__item site-list--active">
-          <a class="main-nav__link" href="#">Главная</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="http://localhost:3000/photo.html">Фото и видео</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Форма отзыва</a>
+          <a class="main-nav__link" href="http://localhost:3000/form.html">Форма отзыва</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Html Academy</a>
+          <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
         </li>
       </ul>
     </nav>
@@ -59,13 +62,13 @@
         </div>
         <figure class="post__image">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/main-city-desktop@1x.webp 1x, /img/main-city-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/main-city-tablet@1x.webp 1x, /img/main-city-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="/img/main-city-mobile@1x.webp 1x, /img/main-city-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="/img/main-city-desktop@1x.jpg 1x, /img/main-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="/img/main-city-tablet@1x.jpg 1x, /img/main-city-tablet@2x.jpg 2x">
-            <img class="post__image-city" src="/img/main-city-mobile@1x.jpg 1x" srcset="/img/main-city-mobile@2x.jpg 2x" alt="Город">
+            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+            <img class="post__image-city" src="img/main-city-mobile@1x.jpg 1x" srcset="img/main-city-mobile@2x.jpg 2x" alt="Город">
           </picture>
         </figure>
       </section>
@@ -91,9 +94,9 @@
         </div>
         <figure class="post__image">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/main-bridge-desktop@1x.webp 1x, /img/main-bridge-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/main-bridge-tablet@1x.webp 1x, /img/main-bridge-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="/img/main-bridge-mobile@1x.webp 1x" srcset="/img/main-bridge-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
 
             <source media="(min-width: 1200px)" srcset="/img/main-bridge-desktop@1x.jpg 1x, /img/main-bridge-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="/img/main-bridge-tablet@1x.jpg 1x, /img/main-bridge-tablet@2x.jpg 2x">
@@ -125,15 +128,7 @@
       <a class="order__button btn-item" href="#">Найти гостиницу</a>
     </div>
     <div class="map">
-      <picture>
-        <source type="image/webp" media="(min-width: 1200px)" srcset="/img/bg-map-desktop@1x.webp 1x, /img/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="/img/bg-map-tablet@1x.webp 1x, /img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" src="/img/bg-map-mobile@1x.webp 1x" srcset="/img/bg-map-mobile@2x.webp 2x">
-
-        <source media="(min-width: 1200px)" srcset="/img/bg-map-desktop@1x.jpg 1x, /img/bg-map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="/img/bg-map-tablet@1x.jpg 1x, /img/bg-map-tablet@2x.jpg 2x">
-        <img class="map__img" src="/img/bg-map-mobile@1x.jpg 1x" srcset="/img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта">
-      </picture>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050598407!2d-111.83015803882583!3d34.85437338102037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1522174181075" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </main>
   <footer class="page-footer">
@@ -142,19 +137,19 @@
       <a class="social__item" href="#">
         Twitter
         <svg version="1.0" x="0px" y="0px" width="17.5px" height="14.663px" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-          <use xlink:href="#social__item-twitter"></use>
+          <use xlink:href="#icon-twitter"></use>
         </svg>
       </a>
       <a class="social__item" href="#">
         Facebook
         <svg version="1.0" x="0px" y="0px" width="8.672px" height="18.944px" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-          <use xlink:href="#social__item-facebook"></use>
+          <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
       <a class="social__item" href="#">
         Youtube
         <svg version="1.0" x="0px" y="0px" width="19.979px" height="14.015px" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-          <use xlink:href="#social__item-youtube"></use>
+          <use xlink:href="#icon-youtube"></use>
         </svg>
       </a>
     </div>
@@ -162,10 +157,11 @@
       <a class="realizer__icon" href="https://htmlacademy.ru/intensive/adaptive">
         Htmlacademy
         <svg>
-          <use xlink:href="#icon-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"/>
         </svg>
       </a>
     </p>
   </footer>
   </div>
+  <script src="js/menu-toggle.js"></script>
 </body>

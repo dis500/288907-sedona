@@ -1,8 +1,10 @@
 .failur-popup{
+  display: none;
   width: 320px;
   margin: 0 auto;
   padding-top: 44px;
   padding-bottom: 35px;
+  box-shadow:  0 0 40px 0 #e4e4e4;
 }
 
 .failur-popup__wrapper{
@@ -32,15 +34,19 @@
   margin-right: auto;
 }
 
+.popup--show{
+  display: block;
+}
+
 @media (min-width: @tablet-width){
   .failur-popup{
     width: 400px;
   }
-  
+
   .failur-popup__wrapper{
-    width: 295px;  
+    width: 295px;
   }
-  
+
   .failur-popup__title{
     width: 220px;
     font-size: 30px;
@@ -48,7 +54,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .failur-popup__btn{
     width: 272px;
   }

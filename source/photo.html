@@ -4,13 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="../build/css/style.min.css" as="style">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
 </head>
 
-<svg style="display: none">
+<div style="display: none">
  <include src="build/img/sprite.svg"></include>
-</svg>
+</div>
 
 <body>
   <div class="total-wrapper">
@@ -22,20 +25,20 @@
         <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" alt="Логотип">
       </picture>
     </a>
-    <nav class="main-nav main-nav--opened main-nav--closed">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Главная</a>
+          <a class="main-nav__link" href="http://localhost:3000/">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Фото и видео</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Форма отзыва</a>
+          <a class="main-nav__link" href="http://localhost:3000/form.html">Форма отзыва</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Html Academy</a>
+          <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
         </li>
       </ul>
     </nav>
@@ -53,13 +56,13 @@
       <article class="photo__item photo__item--full">
         <a class="photo__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/photo-sunset-desktop@1x.webp 1x, /img/photo-sunset-desktop@2x.webp 2x">
-            <source type="image/webp"  media="(min-width: 768px)" srcset="/img/photo-sunset-tablet@1x.webp 1x, /img/photo-sunset-tablet@2x.webp 2x">
-            <source type="image/webp" src="/img/photo-sunset-mobile@1x.webp 1x" srcset="/img/photo-sunset-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+            <source type="image/webp"  media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="/img/photo-sunset-desktop@1x.jpg, /img/photo-sunset-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="/img/photo-sunset-tablet@1x.jpg, /img/photo-sunset-tablet@2x.jpg 2x">
-            <img class="photo__image" src="/img/photo-sunset-mobile@1x.jpg" srcset="/img/photo-sunset-mobile@2x.jpg 2x" width="100%" height="100%" alt="Закат">
+            <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg 2x">
+            <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="100%" height="100%" alt="Закат">
           </picture>
         </a>
         <div class="photo__comment">
@@ -78,13 +81,13 @@
       <article class="photo__item">
         <a class="photo__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/photo-cactus-desktop@1x.webp 1x, /img/photo-cactus-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/photo-cactus-tablet@1x.webp 1x, /img/photo-cactus-tablet@2x.webp 2x">
-            <source type="image/webp" src="/img/photo-cactus-mobile@1x.webp 1x" srcset="/img/photo-cactus-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="/img/photo-cactus-desktop@1x.jpg, /img/photo-cactus-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="/img/photo-cactus-tablet@1x.jpg, /img/photo-cactus-tablet@2x.jpg 2x">
-            <img class="photo__image" src="/img/photo-cactus-mobile@1x.jpg" srcset="/img/photo-cactus-mobile@2x.jpg 2x" width="100%" height="100%" alt="Кактусы">
+            <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg 2x">
+            <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="100%" height="100%" alt="Кактусы">
           </picture>
         </a>
         <div class="photo__comment">
@@ -103,13 +106,13 @@
       <article class="photo__item">
         <a class="photo__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/photo-roads-desktop@1x.webp 1x, /img/photo-roads-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/photo-roads-tablet@1x.webp 1x, /img/photo-roads-tablet@2x.webp 2x">
-            <source type="image/webp" src="/img/photo-roads-mobile@1x.webp 1x" srcset="/img/photo-roads-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="/img/photo-roads-desktop@1x.jpg, /img/photo-roads-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="/img/photo-roads-tablet@1x.jpg, /img/photo-roads-tablet@2x.jpg 2x">
-            <img class="photo__image" src="/img/photo-roads-mobile@1x.jpg" srcset="/img/photo-roads-mobile@2x.jpg 2x" width="100%" height="100%" alt="Дороги">
+            <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg 2x">
+            <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="100%" height="100%" alt="Дороги">
           </picture>
         </a>
         <div class="photo__comment">
@@ -128,13 +131,13 @@
       <article class="photo__item">
         <a class="photo__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/photo-bridge-desktop@1x.webp 1x, /img/photo-bridge-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="/img/photo-bridge-tablet@1x.webp 1x, /img/photo-bridge-tablet@2x.webp 2x">
-            <source type="image/webp" src="/img/photo-bridge-mobile@1x.webp 1x" srcset="/img/photo-bridge-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="/img/photo-bridge-desktop@1x.jpg, /img/photo-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="/img/photo-bridge-tablet@1x.jpg, /img/photo-bridge-tablet@2x.jpg 2x">
-            <img class="photo__image" src="/img/photo-bridge-mobile@1x.jpg" srcset="/img/photo-bridge-mobile@2x.jpg 2x" width="100%" height="100%" alt="Мост">
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="100%" height="100%" alt="Мост">
           </picture>
         </a>
         <div class="photo__comment">
@@ -158,13 +161,13 @@
         <p class="note__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </div>
       <div class="note__video">
-        <source type="image/webp" media="(min-width: 1200px)" srcset="/img/video-desktop@1x.webp 1x, /img/video-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="/img/video-tablet@1x.webp 1x, /img/video-tablet@2x.webp 2x">
-        <source type="image/webp" src="/img/video-mobile@1x.webp 1x" srcset="/img/video-mobile@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
 
-        <source media="(min-width: 1200px)" srcset="/img/video-desktop@1x.jpg, /img/video-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="/img/video-tablet@1x.jpg, /img/video-tablet@2x.jpg 2x">
-        <img class="note__img" src="/img/video-mobile@1x.jpg" srcset="/img/video-mobile@2x.jpg 2x" width="100%" height="100%" alt="Видео">
+        <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg 2x">
+        <img class="note__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="100%" height="100%" alt="Видео">
         <div class="note__wrapper">
           <div class="note__player">
             <div class="note__player-scale"></div>
@@ -173,20 +176,20 @@
           <button class="note__controls note__controls--replay" type="button">
             Повтор
             <svg version="1.0" x="0px" y="0px" width="16px" height="20px" enable-background="new 0 0 16 20" xml:space="preserve">
-              <use xlink:href="#icon-replay"></use>
+              <use xlink:href="#icon-video-replay"></use>
             </svg>
           </button>
           <div class="note__controls-wrapper">
             <button class="note__controls" type="button">
               Субтитры
               <svg version="1.0" x="0px" y="0px" width="32px" height="20px" enable-background="new 0 0 32 20" xml:space="preserve">
-                <use xlink:href="#icon-subtitles"></use>
+                <use xlink:href="#icon-video-subtitles"></use>
               </svg>
             </button>
             <button class="note__controls" type="button">
               На весь экран
               <svg version="1.0" x="0px" y="0px" width="20px" height="20px" enable-background="new 0 0 20 20" xml:space="preserve">
-                <use xlink:href="#icon-fullscreen"></use>
+                <use xlink:href="#icon-video-fullscreen"></use>
               </svg>
             </button>
           </div>
@@ -200,19 +203,19 @@
       <a class="social__item" href="">
         Twitter
         <svg version="1.0" x="0px" y="0px" width="17.5px" height="14.663px" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-          <use xlink:href="#social__item-twitter"></use>
+          <use xlink:href="#icon-twitter"></use>
         </svg>
       </a>
       <a class="social__item" href="">
         Facebook
         <svg version="1.0" x="0px" y="0px" width="8.672px" height="18.944px" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-          <use xlink:href="#social__item-facebook"></use>
+          <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
       <a class="social__item" href="">
         Youtube
         <svg version="1.0" x="0px" y="0px" width="19.979px" height="14.015px" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-          <use xlink:href="#social__item-youtube"></use>
+          <use xlink:href="#icon-youtube"></use>
         </svg>
       </a>
     </div>
@@ -220,10 +223,11 @@
       <a class="realizer__icon" href="https://htmlacademy.ru/intensive/adaptive">
         Htmlacademy
         <svg>
-          <use xlink:href="#icon-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"/>
         </svg>
       </a>
     </p>
   </footer>
   </div>
+  <script src="js/menu-toggle.js"></script>
 </body>

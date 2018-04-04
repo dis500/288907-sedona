@@ -1,6 +1,8 @@
 .success-popup{
+  display: none;
   width: 320px;
   margin: 0 auto;
+  box-shadow:  0 0 40px 0 #e4e4e4;
 }
 
 .success-popup__wrapper{
@@ -37,32 +39,36 @@
   background-color: #f2f2f2;
 }
 
+.popup--show{
+  display: block;
+}
+
 @media (min-width: @tablet-width){
   .success-popup{
     width: 640px;
   }
-  
+
   .success-popup__wrapper{
     width: 430px;
   }
-  
+
   .success-popup__title{
     width: 355px;
     font-size: 30px;
   }
-  
+
   .success-popup__text{
     width: 420px;
   }
-  
+
   .success-popup__item{
-    width: 650px;
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  
+
   .success-popup__btn{
     width: 458px;
     margin-left: auto;

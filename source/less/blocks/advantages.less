@@ -11,14 +11,16 @@
   text-align: center;
 }
 
-.advantages__item::after{
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  content: "";
-  width: 90%;
-  height: 1px;
-  background-color: #d6d6d6;
+.advantages__item{
+  &::after{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #d6d6d6; 
+  }
 }
 
 .advantages__title{
@@ -51,8 +53,10 @@
     padding-right: 45px;
   }
 
-  .advantages__item::after{
-    display: none;
+  .advantages__item{
+    &::after{
+      display: none; 
+    }
   }
 
   .advantages__title{

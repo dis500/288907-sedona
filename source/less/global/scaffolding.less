@@ -2,6 +2,7 @@
   font-family: "Pt Sans";
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src: url("../../fonts/ptsans.woff") format("woff"),
        url("../../fonts/ptsans.woff2") format("woff2");
 
@@ -11,6 +12,7 @@
   font-family: "Pt Sans";
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
   src: url("../../fonts/ptsansbold.woff") format("woff"),
        url("../../fonts/ptsansbold.woff2") format("woff2");
 }
@@ -43,6 +45,19 @@ body{
   text-transform: uppercase;
   border: 0;
   box-sizing: border-box;
+  
+  &:hover{
+    background-color: #669ec0;
+  }
+  
+  &:active{
+    color: #88b6d1;
+    background-color: #5496bd;
+  }
+  
+  &:disabled{
+    background-color: #e5e5e5;
+  }
 }
 
 .visually-hidden {
@@ -77,4 +92,8 @@ img{
   background-color: @gray;
   border: 0;
   box-sizing: border-box;
+  
+  &:hover{
+    background-color: #e5e5e5;
+  }
 }

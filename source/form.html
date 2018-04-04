@@ -4,13 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="../build/css/style.min.css" as="style">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
 </head>
 
-<svg style="display: none">
+<div style="display: none">
   <include src="build/img/sprite.svg"></include>
-</svg>
+</div>
 
 <body>
   <div class="total-wrapper">
@@ -22,20 +25,20 @@
         <img class="page-header__logo-image" src="/img/logo-sedona-mobile.svg" alt="Логотип">
       </picture>
     </a>
-    <nav class="main-nav main-nav--opened main-nav--closed">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Главная</a>
+          <a class="main-nav__link" href="http://localhost:3000/">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="http://localhost:3000/photo.html">Фото и видео</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Форма отзыва</a>
+          <a class="main-nav__link main-nav__link--active" href="http://localhost:3000/form.html">Форма отзыва</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Html Academy</a>
+          <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
         </li>
       </ul>
     </nav>
@@ -111,7 +114,7 @@
       <div class="comment">
         <p class="comment__title">Опишите свои эмоции:</p>
         <label class="comment__label">
-          <textarea class="comment__textarea">Опишите подробно все свои восторги</textarea>
+          <textarea class="comment__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
         </label>
         <div class="comment__wrapper">
           <p class="comment__text">* - Обязательные поля</p>
@@ -126,19 +129,19 @@
       <a class="social__item" href="">
         Twitter
         <svg version="1.0" x="0px" y="0px" width="17.5px" height="14.663px" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-          <use xlink:href="#social__item-twitter"></use>
+          <use xlink:href="#icon-twitter"></use>
         </svg>
       </a>
       <a class="social__item" href="">
         Facebook
         <svg version="1.0" x="0px" y="0px" width="8.672px" height="18.944px" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-          <use xlink:href="#social__item-facebook"></use>
+          <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
       <a class="social__item" href="">
         Youtube
         <svg version="1.0" x="0px" y="0px" width="19.979px" height="14.015px" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-          <use xlink:href="#social__item-youtube"></use>
+          <use xlink:href="#icon-youtube"></use>
         </svg>
       </a>
     </div>
@@ -146,7 +149,7 @@
       <a class="realizer__icon" href="https://htmlacademy.ru/intensive/adaptive">
         Htmlacademy
         <svg>
-          <use xlink:href="#icon-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"/>
         </svg>
       </a>
     </p>
@@ -168,4 +171,40 @@
     </div>
   </div>
   </div>
+  <script src="js/menu-toggle.js"></script>
+  <script>
+    var popup = document.querySelector(".failur-popup");
+    var successPopup = document.querySelector(".success-popup");
+    var close = popup.querySelector(".btn-item");
+    var form = document.querySelector("form");
+    var name = form.querySelector("[name=name]");
+    var lastName = form.querySelector("[name=last-name]");
+    var number = form.querySelector("[name=number]");
+    var email = form.querySelector("[name=email]");
+
+   /* form.addEventListener("submit", function (evt) {
+      if (!name.value || !lastName.value || !number.value || !email.value) {
+        evt.preventDefault();
+        popup.classList.add("popup--show");
+        console.log("Заполнить форму");
+      }else{
+        evt.preventDefault();
+        popup.classList.add("popup--show");
+        console.log("Форма отправлена");
+      }
+    }) */
+    
+    form.addEventListener("submit", function (evt){
+    if (name.value == "" || name.value == " "){
+      evt.preventDefault();
+      successPopup.classList.add("popup--show");
+      console.log("Форма отправлена");
+    }
+    });
+
+    close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("popup--show");
+      });
+  </script>
 </body>
