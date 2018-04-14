@@ -71,6 +71,7 @@
   font-size: 0;
   background-color: transparent;
   border: 0;
+  outline: none;
 
   svg{
     fill: #5c6870;
@@ -158,7 +159,11 @@
   .note__controls{
     
     svg{
-      fill: #ffffff; 
+      fill: @main-color; 
+      
+      &:hover{
+        fill: @main-color;
+      }
     }
   }
 
